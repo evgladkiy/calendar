@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Forms & Widgets</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="main-container">
+		<div class="vertical-sections__wrapper">
+
+			<section class="section section_vertical calendar-section">
+				<div class="calendar-header section_vertical__header clearfix">
+					<button class="calendar-header__control calendar-header__control_prev"></button>
+					<p class="calendar-header__date">
+						<span id="calendar-month">May</span>
+						<span id="calendar-year">2014</span>
+					</p>
+					<button class="calendar-header__control calendar-header__control_next"></button>
+				</div>
+				<div class="section_vertical__content-container">
+					<div class="calendar-container">
+						<table class="calendar-table">
+							<thead>
+								<tr>
+									<th class="calendar-table__day">Sun</th>
+									<th class="calendar-table__day">Mon</th>
+									<th class="calendar-table__day">Tue</th>
+									<th class="calendar-table__day">Wed</th>
+									<th class="calendar-table__day">Thu</th>
+									<th class="calendar-table__day">Fri</th>
+									<th class="calendar-table__day">Sat</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="calendar-table__date calendar-table__date_not-active"><span>29</span></td>
+									<td class="calendar-table__date calendar-table__date_not-active"><span>30</span></td>
+									<td class="calendar-table__date"><span>1</span></td>
+									<td class="calendar-table__date"><span>2</span></td>
+									<td class="calendar-table__date_current"><span>3</span></td>
+									<td class="calendar-table__date"><span>4</span></td>
+									<td class="calendar-table__date"><span>5</span></td>
+								</tr>
+								<tr>
+									<td class="calendar-table__date"><span>6</span></td>
+									<td class="calendar-table__date calendar-table__date_with-events"><span>7</span></td>
+									<td class="calendar-table__date"><span>8</span></td>
+									<td class="calendar-table__date"><span>9</span></td>
+									<td class="calendar-table__date"><span>10</span></td>
+									<td class="calendar-table__date"><span>11</span></td>
+									<td class="calendar-table__date"><span>12</span></td>
+								</tr>
+								<tr>
+									<td class="calendar-table__date"><span>13</span></td>
+									<td class="calendar-table__date"><span>14</span></td>
+									<td class="calendar-table__date"><span>15</span></td>
+									<td class="calendar-table__date"><span>16</span></td>
+									<td class="calendar-table__date"><span>17</span></td>
+									<td class="calendar-table__date"><span>18</span></td>
+									<td class="calendar-table__date"><span>19</span></td>
+								</tr>
+								<tr>
+									<td class="calendar-table__date"><span>20</span></td>
+									<td class="calendar-table__date"><span>21</span></td>
+									<td class="calendar-table__date"><span>22</span></td>
+									<td class="calendar-table__date calendar-table__date_with-events"><span>23</span></td>
+									<td class="calendar-table__date"><span>24</span></td>
+									<td class="calendar-table__date"><span>25</span></td>
+									<td class="calendar-table__date"><span>26</span></td>
+								</tr>
+								<tr>
+									<td class="calendar-table__date"><span>27</span></td>
+									<td class="calendar-table__date"><span>28</span></td>
+									<td class="calendar-table__date"><span>29</span></td>
+									<td class="calendar-table__date"><span>30</span></td>
+									<td class="calendar-table__date calendar-table__date_not-active"><span>1</span></td>
+									<td class="calendar-table__date calendar-table__date_not-active"><span>2</span></td>
+									<td class="calendar-table__date calendar-table__date_not-active"><span>3</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<button class="button button_large">Add event</button>
+				</div>
+			</section>
+
+			<section class="section section_vertical section_vertical_large section-message-form">
+				<div class="section_vertical__content-container">
+					<form action="post" class="message-form">
+						<fieldset class="clearfix">
+							<div class="form-input__container">
+								<input class="message-form__subject form-input" type="text" />
+								<i class="form-input__button form-input__button_add-email"></i>
+								<ul class="email-list">
+									<li class="email-list__item">rick.james@mail.com<i class="delete-button"></i></li>
+								</ul>
+							</div>
+							<div class="form-input__container">
+								<input class="message-form__subject form-input" type="text" placeholder="Subject" />
+								<input class="message-form__file" id="message-form__file" type="file" />
+								<label class="form-input__button" for="message-form__file"></label>
+							</div>
+							<textarea class="message-form__textarea form-input" name="message-form-text" id="message-form__textarea" rows=8 placeholder="Message"></textarea>
+							<input type="submit" class="button button_small message-form__submit" value="Send" />
+						</fieldset>
+					</form>
+				</div>
+			</section>
+
+			<section class="section section_vertical">
+				<div class="section_vertical__header booking-header">
+					<img class="booking-header__img" src="./img/bookingImg.jpg" alt="booking header foto" width="346" />
+					<div class="booking-location">
+						<h3 class="booking-location__hotel">Hotel Relais</h3>
+						<p class="booking-location__sity">Paris, France</p>
+					</div>
+				</div>
+				<div class="section_vertical__content-container">
+					<form method="post" class="booking-form">
+						<fieldset>
+							<label for="Check-in-date">Check in</label>
+							<div class="form-input__container">
+								<input class="form-input booking-form__input" type="text" id="Check-in-date" placeholder="9 July, 2016" />
+								<i class="form-input__button form-input__button_date-picker"></i>
+							</div>
+							<label for="Check-out-date">Check out</label>
+							<div class="form-input__container">
+								<input class="form-input booking-form__input" type="text" id="Check-out-date" placeholder="16 July, 2016" />
+								<i class="form-input__button form-input__button_date-picker"></i>
+							</div>
+							<input class="booking-form__checkbox" type="checkbox" id="is-flexible-dates" checked />
+							<label class="checkbox-lebel" for="is-flexible-dates">Flexible dates</label>
+							<fieldset class="selects-wrapper">
+								<div class="select-container">
+									<p class="select-label">Adults</p>
+									<select class="form-input booking-form__select" id="booking-form-adalts">
+										<option>1</option>
+										<option selected>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>42</option>
+									</select>
+								</div>
+								<div class="select-container">
+									<p class="select-label">Children</p>
+									<select class="form-input booking-form__select" id="booking-form-children">
+										<option selected>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>42</option>
+									</select>
+								</div>
+							</fieldset>
+							<button class="button button_large button_search"><span>Search rooms</span></button>
+						</fieldset>
+					</form>
+				</div>
+			</section>
+		</div>
+
+		<section class="section section_horizontal">
+			<div class="graph-container">
+				<div class="graph-grid__container">
+					<ul class="graph-grid">
+						<li class="graph-grid__item">40</li>
+						<li class="graph-grid__item">30</li>
+						<li class="graph-grid__item">20</li>
+						<li class="graph-grid__item">0</li>
+					</ul>
+					<ul class="graph-days__container graph-days__container_value">
+						<li class="graph-item graph-item_mon"><span class="graph-item__value">17</span></li>
+						<li class="graph-item graph-item_tues"><span class="graph-item__value">18</span></li>
+						<li class="graph-item graph-item_wed"><span class="graph-item__value">27</span></li>
+						<li class="graph-item graph-item_thu"><span class="graph-item__value">33</span></li>
+						<li class="graph-item graph-item_fri"><span class="graph-item__value">28</span></li>
+						<li class="graph-item graph-item_sat"><span class="graph-item__value">34</span></li>
+						<li class="graph-item graph-item_sun"><span class="graph-item__value">31</span></li>
+					</ul>
+				</div>
+				<ul class="graph-days__container">
+					<li class="graph-item">Mon</li>
+					<li class="graph-item">Tues</li>
+					<li class="graph-item">Wed</li>
+					<li class="graph-item">Thu</li>
+					<li class="graph-item">Fri</li>
+					<li class="graph-item">Sat</li>
+					<li class="graph-item">Sun</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="section section_horizontal">
+			<div class="destination-container">
+				<div class="destination-item">
+					<input class="destination-item__radio" type="radio" name="destination-radio" id="destination-item-reviews" checked />
+					<label class="destination-item__button destination-item__button_reviews" for="destination-item-reviews"></label>
+					<div class="destination-item__content clearfix">
+						<div class="destination-info">
+							<h3 class="destination-info__header">My most favourite place in the world</h3>
+							<p class="destination-info__reviews"><span class="destination-info__reviews-count">154</span>Reviews</p>
+							<p class="destination-info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit
+								Maecenas a pulvinar ipsum. Aliquam sit amet iaculis dolor. Vivamus sed diam sollicitudin.</p>
+							<a class="destination-info__link" href="#">Read more</a>
+						</div>
+						<div class="destination-image__container">
+							<img class="destination-image" src="./img/destinationImg.jpg" alt="destination foto" />
+							<div class="destination-statistics__container">
+								<span class="destination-statistics destination-statistics__coments">752</span>
+								<span class="destination-statistics destination-statistics__likes">2709</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="destination-item">
+					<input class="destination-item__radio" type="radio" name="destination-radio" id="destination-item-location" />
+					<label class="destination-item__button destination-item__button_location" for="destination-item-location"></label>
+					<div class="destination-item__content">
+						<div class="destination-info">
+							<h3 class="destination-info__header">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+							<p class="destination-info__reviews"><span class="destination-info__reviews-count">321</span>Reviews</p>
+							<p class="destination-info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit
+								Maecenas a pulvinar ipsum. Aliquam sit amet iaculis dolor. Vivamus sed diam sollicitudin.</p>
+							<a class="destination-info__link" href="#">Read more</a>
+						</div>
+						<div class="destination-image__container">
+							<img class="destination-image" src="./img/destinationImg.jpg" alt="destination foto">
+							<div class="destination-statistics__container">
+								<span class="destination-statistics destination-statistics__coments">2014</span>
+								<span class="destination-statistics destination-statistics__likes">4102</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="destination-item">
+					<input class="destination-item__radio" type="radio" name="destination-radio" id="destination-item-star" />
+					<label class="destination-item__button destination-item__button_star" for="destination-item-star"></label>
+					<div class="destination-item__content">
+						<div class="destination-info">
+							<h3 class="destination-info__header">Lorem ipsum dolor sit amet.</h3>
+							<p class="destination-info__reviews"><span class="destination-info__reviews-count">1235</span>Reviews</p>
+							<p class="destination-info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit
+								Maecenas a pulvinar ipsum.</p>
+							<a class="destination-info__link" href="#">Read more</a>
+						</div>
+						<div class="destination-image__container">
+							<img class="destination-image" src="./img/destinationImg.jpg" alt="destination foto" />
+							<div class="destination-statistics__container">
+								<span class="destination-statistics destination-statistics__coments">35643</span>
+								<span class="destination-statistics destination-statistics__likes">25129</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+	</div>
+</body>
+</html>

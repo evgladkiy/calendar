@@ -1,0 +1,955 @@
+ /* ===== Styles reset ===== */
+
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  background: transparent;
+  font-size: 100%;
+  margin: 0;
+  outline: 0;
+  vertical-align: baseline;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+caption {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+body:not(.cq-wcm-edit) input,
+body:not(.cq-wcm-edit) input[type="text"],
+body:not(.cq-wcm-edit) input[type="email"],
+body:not(.cq-wcm-edit) input[type="search"],
+body:not(.cq-wcm-edit) input[type="password"],
+body:not(.cq-wcm-edit) textarea {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(hsla(0,0%,100%,0)), to(hsla(0,0%,100%,0))) !important;
+  background-image: -webkit-linear-gradient(hsla(0,0%,100%,0), hsla(0,0%,100%,0)) !important;
+}
+
+button {
+    background-color: inherit;
+    outline: 0;
+    padding: 0;
+}
+
+button,
+input[type="submit"] {
+    border: none;
+    cursor: pointer;
+}
+
+::-ms-clear,
+::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+/* ===== Fonts ===== */
+
+@font-face {
+    font-family: 'Gotham Book';
+    src: local('Gotham Book'), local('Gotham-Book'),
+         url('../fonts/GothamSSm-Book.otf') format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Light';
+    src: local('Gotham Light'), local('Gotham-Light'),
+        url('../fonts/GothamSSm-Light.otf') format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Medium';
+    src: local('Gotham Medium'), local('Gotham-Medium'),
+         url('../fonts/GothamSSm-Medium.otf') format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Bold';
+    src: local('Gotham Bold'), local('Gotham-Bold'),
+         url('../fonts/GothamSSm-Bold.otf') format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ===== Basic styles ===== */
+
+body {
+    height: 100%;
+    min-width: 320px;
+    overflow-x: hidden;
+    background-color: #d9d9d9;
+    color: #666666;
+    font-family: "Gotham Book", arial, sans-serif;
+}
+
+.clearfix::after,
+.clearfix::before {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/* ===== Common styles ===== */
+
+.main-container {
+    max-width: 1224px;
+    margin: 0 auto;
+    padding: 55px 20px 0 20px;
+    box-sizing: border-box;
+}
+
+.section {
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.14);
+}
+
+.section_vertical {
+    display: inline-block;
+    width: 100%;
+    max-width: 346px;
+    margin: 0 20px;
+    vertical-align: top;
+}
+
+.section_vertical_large {
+    max-width: 380px;
+}
+
+.section_horizontal {
+    max-width: 792px;
+    margin-bottom: 40px;
+}
+
+.section_vertical__header {
+    box-sizing: border-box;
+    border-radius: 4px 4px 0 0;
+    text-align: center;
+}
+
+.section_vertical__content-container {
+    padding: 25px;
+}
+
+.button  {
+    padding: 20px 0;
+    border-top: 1px solid #fc7877;
+    border-bottom: 1px solid #6b5757;
+    border-radius: 3px;
+    background-color: #fb6362;
+    color: #ffffff;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    box-shadow: 0px 3px 4.64px -2px rgba(0, 0, 0, 0.45);
+    -webkit-transition: 0.25s background ease;
+    -o-transition: 0.25s background ease;
+    transition: 0.25s background ease;
+}
+
+.button:hover {
+    background-color: #e75453;
+}
+
+.button_large  {
+    width: 100%;
+}
+
+.button_small {
+    padding: 16px 39px;
+}
+
+.button_search span {
+    position: relative;
+    padding-left: 25px;
+}
+
+.button_search span::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: -3px;
+    width: 22px;
+    height: 22px;
+    background: url("./../img/spritesheet.png") -70px 81px;
+}
+
+.vertical-sections__wrapper {
+    margin: 0 -20px 40px -20px;
+}
+
+.form-input {
+    width: 100%;
+    height: 45px;
+    margin-bottom: 25px;
+    padding: 4px 40px 4px 11px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 2px;
+    background-color: rgb(244, 244, 244);
+    font-size: 14px;
+    font-family: "Gotham Light";
+    box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
+}
+
+.form-input__button {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+    background-image: url("./../img/spritesheet.png");
+    cursor: pointer;
+}
+
+.form-input__container {
+    position: relative;
+}
+
+/* ===== Calendar section ===== */
+
+.calendar-section .section_vertical__content-container{
+    padding-top: 14px;
+}
+
+.calendar-header {
+    padding: 21px 38px;
+    background-color: #404a58;
+}
+
+.calendar-header__date {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 17px;
+    line-height: 20px;
+    font-family: "Gotham light";
+    letter-spacing: 0.3px;
+}
+
+.calendar-header__control {
+    width: 10px;
+    height: 20px;
+    background-image: url('./../img/spritesheet.png');
+}
+
+.calendar-header__control_prev {
+    float: left;
+    background-position: 46px -48px;
+}
+.calendar-header__control_prev:hover {
+    background-position: 18px -48px;
+}
+
+.calendar-header__control_next {
+    float:right;
+    background-position: -9px -48px;
+}
+
+.calendar-header__control_next:hover {
+    background-position: -41px 84px;
+}
+
+.calendar-container {
+    padding: 0 4px 21px 4px;
+}
+
+.calendar-table {
+    width: 100%;
+    font-family: "Gotham light";
+    font-size: 14px;
+    text-align: center;
+}
+
+.calendar-table td,
+.calendar-table th {
+    width: 14.285714%;
+    height: 39px;
+    vertical-align: middle;
+}
+
+.calendar-table th {
+    font-family: "Gotham Medium"
+}
+
+.calendar-table .calendar-table__date_current,
+.calendar-table .calendar-table__date_with-events {
+    font-family: "Gotham Bold";
+}
+
+.calendar-table .calendar-table__date_current {
+    vertical-align: top;
+}
+
+.calendar-table__date_current span {
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    background: #fb6362;
+    color: #ffffff;
+    line-height: 39px;
+}
+
+.calendar-table .calendar-table__date_not-active {
+    color: #c5c5c5;
+}
+
+.calendar-table .calendar-table__date_with-events {
+    color: #fb6362;
+}
+
+/* ===== Booking section ===== */
+
+.booking-header {
+    position: relative;
+}
+
+.booking-header__img {
+    display: block;
+    min-height: 185px;
+    border-radius: 4px 4px 0 0;
+}
+
+.booking-location {
+    position: absolute;
+    left: 23px;
+    bottom: 19px;
+    color: #ffffff;
+    text-align: left;
+    letter-spacing: -0.3px
+}
+
+.booking-location__hotel {
+    margin-bottom: 7px;
+    font-size: 25px;
+}
+
+.booking-location__sity {
+    position: relative;
+    padding-left: 21px;
+    font-size: 14px;
+}
+
+.booking-location__sity::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 3px;
+    width: 14px;
+    height: 18px;
+    background: url("./../img/spritesheet.png") -10px 81px;
+}
+
+.booking-form label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.booking-form__input {
+    margin-bottom: 20px;
+    padding: 4px 50px 4px 13px;
+}
+
+.form-input__button_date-picker {
+    border-radius: 2px;
+    background-position: -46px -10px;
+    background-color: #414b59;
+}
+
+.booking-form__checkbox {
+    display: none;
+}
+
+.booking-form__checkbox:checked + .checkbox-lebel::after {
+    display: block;
+}
+
+.booking-form .checkbox-lebel {
+    position: relative;
+    margin-bottom: 29px;
+    padding-left: 35px;
+    font-size: 14px;
+}
+
+.checkbox-lebel::before,
+.checkbox-lebel::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+.checkbox-lebel::before {
+    width: 23px;
+    height: 22px;
+    border-radius: 2px;
+    background: #f4f4f4;
+    box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
+}
+
+.checkbox-lebel::after {
+    top: 1px;
+    left: 4px;
+    display: none;
+    width: 16px;
+    height: 12px;
+    background: url('./../img/spritesheet.png') 0 11px;
+}
+
+.selects-wrapper {
+    margin: 0 -10px 14px -10px;
+    font-size: 0;
+}
+
+.select-container  {
+    display: inline-block;
+    width: 50%;
+    padding: 0 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.select-label {
+    margin-bottom: 10px;
+    font-size: 14px;
+    letter-spacing: -0.3px;
+}
+
+.booking-form__select {
+    padding: 5px 40px 4px 15px;
+    background: #f4f4f4 url('./../img/spritesheet.png') -43px -108px no-repeat;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.booking-form__select::-ms-expand {
+    display: none;
+}
+
+/* ===== Destination section ===== */
+
+.destination-container {
+    position: relative;
+}
+
+.destination-item__radio {
+    display: none;
+}
+
+.destination-item__button {
+    position: relative;
+    display: block;
+    width: 72px;
+    height: 113px;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #404a58;
+    cursor: pointer;
+    -webkit-transition: .2s background ease;
+    -o-transition: .2s background ease;
+    transition: .2s all ease;
+}
+
+.destination-item:not(:last-of-type) .destination-item__button {
+    border-bottom: 1px solid #242931;
+}
+
+.destination-item__radio:checked ~ .destination-item__button {
+    border-bottom: 1px solid #fb6362;
+    background: #fb6362;
+}
+
+.destination-item:last-of-type .destination-item__radio:checked ~ .destination-item__button {
+    border-bottom: none;
+}
+
+.destination-item__button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url("./../img/spritesheet.png");
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.destination-item__button_reviews::after  {
+    background-position: -47px -82px;
+}
+
+.destination-item__button_location::after {
+    background-position: -3px -88px;
+}
+
+.destination-item__button_star::after {
+    background-position: -100px -44px;
+}
+
+.destination-item__content {
+    position: absolute;
+    top: 0;
+    left: 72px;
+    font-family: "Gotham Light";
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: 0.4S all ease;
+    -o-transition: 0.4S all ease;
+    transition: 0.4S all ease;
+}
+
+.destination-item__radio:checked ~ .destination-item__content {
+    visibility: visible;
+    opacity: 1;
+}
+
+.destination-info {
+    float: left;
+    max-width: 357px;
+    padding: 26px 40px 26px 34px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.destination-info__header {
+    padding-right: 50px;
+    color: #4d4d4d;
+    font-size: 21px;
+    font-family: "Gotham Medium";
+    letter-spacing: -0.7px;
+    line-height: 30px;
+}
+
+.destination-info__reviews {
+    margin: 11px 0;
+    color: #999999;
+    font-family: "Gotham Book";
+}
+
+.destination-info__reviews-count {
+    padding-right: 5px;
+    color: #4d4d4d;
+}
+
+.destination-info__text {
+    margin-top: 30px;
+    padding-bottom: 17px;
+    line-height: 24px;
+    letter-spacing: -0.28px;
+}
+
+.destination-info__link {
+    color: #fb6362;
+    text-decoration: none;
+    letter-spacing: -0.3px;
+}
+
+.destination-image__container {
+    position: relative;
+    float:right;
+}
+
+.destination-image__container::before {
+  content: '';
+  position: absolute;
+  top: 38px;
+  left: 0;
+  border-left: 22px solid #ffffff;
+  border-top: 22px solid transparent;
+  border-bottom: 22px solid transparent;
+}
+
+.destination-image {
+    width: 363px;
+    height: 340px;
+}
+
+.destination-statistics__container {
+    position: absolute;
+    bottom: 27px;
+    right: 28px;
+    color: #ffffff;
+    font-size: 17px;
+}
+
+.destination-statistics {
+    position: relative;
+    padding-left: 45px;
+}
+
+.destination-statistics::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 10px;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: url("./../img/spritesheet.png");
+}
+
+.destination-statistics__coments::before {
+    background-position: 97px -86px;
+}
+
+.destination-statistics__likes::before {
+    background-position: 49px -7px;
+}
+
+/* ===== Bar Graph section ===== */
+
+/* ===== Graph animation ===== */
+
+@keyframes monValue {
+  0% { height: 0; }
+  100% { height: 49px; }
+}
+
+@keyframes tuesValue {
+  0% { height: 0; }
+  100% { height: 62px; }
+}
+
+@keyframes wedValue {
+  0% { height: 0; }
+  100% { height: 119px; }
+}
+
+@keyframes thuValue {
+  0% { height: 0; }
+  100% { height: 158px; }
+}
+
+@keyframes friValue {
+  0% { height: 0; }
+  100% { height: 129px; }
+}
+
+@keyframes satValue {
+  0% { height: 0; }
+  100% { height: 169px; }
+}
+
+@keyframes sunValue {
+  0% { height: 0; }
+  100% { height: 143px; }
+}
+
+
+/* ===== Bar Graph styles ===== */
+
+.graph-container {
+    padding: 51px 48px 40px 40px;
+    font-family: "Gotham Medium";
+}
+
+.graph-grid__item {
+    padding-bottom: 3px;
+    border-bottom: 1px solid #eaeaea;
+    font-size: 12px;
+}
+
+.graph-grid__item:not(:first-of-type) {
+    margin-top: 54px;
+}
+
+.graph-grid__container {
+    position: relative;
+}
+
+.graph-days__container {
+    padding-left: 19px;
+    padding-top: 10px;
+    font-size: 0;
+    text-align: center;
+}
+
+.graph-days__container_value {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.graph-item {
+    display: inline-block;
+    width: 55px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.graph-item:not(:last-of-type) {
+    margin-right: 35px;
+}
+
+.graph-days__container_value .graph-item {
+    position: relative;
+    border-radius: 2px;
+    background: #fb6362;
+}
+
+.graph-days__container_value .graph-item_mon {
+    height: 49px;
+    animation: 2s ease-in-out 0s 1 monValue;
+}
+
+.graph-days__container_value .graph-item_tues {
+    height: 62px;
+    animation: 2s ease-in-out 0s 1 tuesValue;
+}
+
+.graph-days__container_value .graph-item_wed {
+    height: 119px;
+    animation: 2s ease-in-out 0s 1 wedValue;
+}
+
+.graph-days__container_value .graph-item_thu {
+    height: 158px;
+    animation: 2s ease-in-out 0s 1 thuValue;
+}
+
+.graph-days__container_value .graph-item_fri {
+    height: 129px;
+    animation: 2s ease-in-out 0s 1 friValue;
+}
+
+.graph-days__container_value .graph-item_sat {
+    height: 169px;
+    animation: 2s ease-in-out 0s 1 satValue;
+}
+
+.graph-days__container_value .graph-item_sun {
+    height: 143px;
+    animation: 2s ease-in-out 0s 1 sunValue;
+}
+
+.graph-item__value {
+    position: absolute;
+    left:0;
+    top: -45px;
+    display: inline-block;
+    width: 55px;
+    height: 30px;
+    border-radius: 2px;
+    background: #404a58;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 30px;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: 0.3s opacity ease-in;
+    -o-transition: 0.3s opacity ease-in;
+    transition: 0.3s opacity ease-in;
+}
+
+.graph-item__value::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 21px;
+  border-top: 7px solid #404a58;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}
+
+.graph-days__container .graph-item:hover .graph-item__value {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===== Message form section ===== */
+
+.section-message-form .section_vertical__content-container {
+    padding: 24px 27px 25px 24px;
+}
+
+.email-list {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.email-list__item {
+    display: inline-block;
+    height: 37px;
+    padding-left: 12px;
+    background: #404a58;
+    font-family: "Gotham Light";
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+.email-list__item .delete-button {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    padding: 0 5px;
+    background: url(./../img/spritesheet.png) 54px -81px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.message-form__file {
+    display: none;
+}
+
+.message-form__file + label {
+    background-position: 96px 0px;
+}
+
+.form-input__button_add-email {
+    background-position: 4px 0px;
+}
+
+.message-form__textarea {
+    padding: 9px 11px 15px 11px;
+    height: initial;
+    margin-bottom: 22px;
+    line-height: 1.857;
+    resize: none;
+}
+
+.message-form__submit {
+    float: right;
+}
